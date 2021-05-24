@@ -334,7 +334,7 @@ router.post('/resetpassword',async(req,res)=>{
 })
 
 //tickets route
-router.get('/tickets',async (req,res)=>
+router.get('/tickets',auth,async (req,res)=>
 {
    const client = await mongoClient.connect(dbUrl)
    if(client){
