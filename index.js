@@ -4,6 +4,7 @@ const app = express();
 const cors = require('cors');
 
 // Routes
+const getRoute = require('./routes.js');
 const registerRoute = require('./routes.js');
 const loginRoute = require('./routes.js');
 const activateRoute = require('./routes.js');
@@ -19,6 +20,7 @@ const port = process.env.PORT|| 5000
 app.use(express.json());
 app.use(cors());
 
+app.use('/user', getRoute);
 app.use('/user', registerRoute);
 app.use('/user', loginRoute);
 app.use('/user', activateRoute);
