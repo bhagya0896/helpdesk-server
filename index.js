@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
-
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 const cors = require('cors');
 
 // Routes
@@ -13,20 +17,12 @@ const addTicketRoute = require('./routes.js');
 const deleteTicketRoute = require('./routes.js');
 const addContactFormRoute = require('./routes.js');
 
-
 const port = process.env.PORT|| 5000
 
 //Middleware
 app.use(express.json());
 app.use(cors());
-app.use(function (req, res, next) {
-    //Enabling CORS
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, 
-    Accept, x-client-key, x-client-token, x-client-secret, Authorization");
-      next();
-});
+
 app.use('/user', getRoute);
 app.use('/user', registerRoute);
 app.use('/user', loginRoute);
