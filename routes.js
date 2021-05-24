@@ -77,7 +77,7 @@ router.post ('/register',async(req,res)=>
 
                     `<h3> Hello ${username} </h3>
                     <p>Thank you for registering into our Application. Much Appreciated! Just one last step is laying ahead of you...</p>
-                    <p>To activate your account please follow this link: <a target="_" href="http://localhost:3000/activate-user/${token}">http://localhost:3000/activate </a></p>
+                    <p>To activate your account please follow this link: <a target="_" href="https://helpdeskticket-client.herokuapp.com/activate-user/${token}">https://helpdeskticket-client.herokuapp.com/activate </a></p>
                     <p>Cheers</p>
                     <p>Your Application Team</p>`
                      
@@ -116,7 +116,7 @@ router.post ('/register',async(req,res)=>
 
                     `<h3> Hello</h3>
                     <p>Thank you for registering into our Application. Much Appreciated! Just one last step is laying ahead of you...</p>
-                    <p>To activate your account please follow this link: <a target="_" href="http://localhost:3000/activate-user/${token}">http://localhost:3000/activate </a></p>
+                    <p>To activate your account please follow this link: <a target="_" href="https://helpdeskticket-client.herokuapp.com/activate-user/${token}">https://helpdeskticket-client.herokuapp.com/activate </a></p>
                     <p>Cheers</p>
                     <p>Your Application Team</p>`
                      
@@ -253,7 +253,7 @@ router.post('/forgetpassword',async(req,res)=>{
                           html: 
                           `<h3> Hi ${username}, </h3>
                           <p>We are sending you this email because you requested a password reset.</p>
-                          <p>Click on the linkto create a new password : <a target="_" href="http://localhost:3000/reset-password/${ resetToken}">http://localhost:3000/reset-password </a></p>
+                          <p>Click on the linkto create a new password : <a target="_" href="https://helpdeskticket-client.herokuapp.com/reset-password/${ resetToken}">https://helpdeskticket-client.herokuapp.com/reset-password </a></p>
                           
                           <p> If you didn't request a password reset, you can ignore this email.Your password would not be changed.</p>
                           <p><b> the HelpDesk team</b></p>`
