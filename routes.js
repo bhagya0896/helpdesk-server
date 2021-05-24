@@ -29,7 +29,8 @@ const dbUrl = process.env.DB_URL;
 //middleware-authentication
 const auth = require('./auth.js');
 
-
+router.post('/' , (req,res)=>
+            "Welcome to my app")
 //register route
 router.post ('/register',async(req,res)=>
 {
