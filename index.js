@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-
+/*
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
@@ -22,7 +22,7 @@ app.configure(function () {
   app.use(app.router);
   app.use(express.static(path.join(application_root, "public")));
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-});
+});*/
 
 const cors = require('cors');
 
